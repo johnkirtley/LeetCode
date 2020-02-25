@@ -1,6 +1,6 @@
 // Search 2 arrays to see if target value can be reached
 
-// O(n^2)
+// O(a * b)
 // const findSum = (a, b, target) => {
 //     for (let i = 0; i < a.length; i++) {
 //         let neededValue = target - a[i];
@@ -13,16 +13,17 @@
 //     return false;
 // }
 
-
+// O(a + b)
 const findSum = (a, b, target) => {
     let complements = {};
 
     for (let i = 0; i < a.length; i++) {
-        complements[`${i}`] = target - a[i];
+        let item = target - a[i];
+        complements[item] = true;
     }
 
-    for (let i = 0; i < b.length; i++) {
-        if (Object.values(complements).indexOf(b[i]) > -1) {
+    for (let j = 0; j < b.length; j++) {
+        if (complements[b[j]]) {
             return true;
         }
     }
@@ -31,12 +32,9 @@ const findSum = (a, b, target) => {
 
 
 
-
-
-
 // Tests
 const arr1 = [2, 4, 2, 6, 8, 34, 53]
 const arr2 = [6, 54, 34, 67, 34]
-const value = 73
+const value = 36
 
 console.log(findSum(arr1, arr2, value))
