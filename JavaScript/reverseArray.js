@@ -3,22 +3,17 @@
 
 const reverse = (arr) => {
 
-    // Establish beginning & end points
-    let leftIndex = 0;
-    let rightIndex = arr.length - 1;
+    let left = 0;
+    let right = arr.length - 1;
 
-    //Reverse Characters
-    while (leftIndex < rightIndex) {
-        // Store characters in variable so they do not get overwritten
-        let temp = arr[leftIndex];
+    while (left < right) {
+        let temp = arr[left]
 
-        // Swap characters
-        arr[leftIndex] = arr[rightIndex];
-        arr[rightIndex] = temp;
+        arr[left] = arr[right];
+        arr[right] = temp;
 
-        // Continue to move towards the middle of the array
-        leftIndex++;
-        rightIndex--;
+        left++;
+        right--;
     }
     return arr;
 }

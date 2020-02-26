@@ -21,7 +21,7 @@ const checkForMatches2 = (a, b) => {
 
     for (let i = 0; i < a.length; i++) {
         if (!hashTable[a[i]]) {
-            const item = a[i];
+            let item = a[i];
             hashTable[item] = true;
         }
     }
@@ -35,4 +35,4 @@ const checkForMatches2 = (a, b) => {
 }
 
 
-console.log(checkForMatches3(array1, array2));
+console.log(checkForMatches2(array1, array2));

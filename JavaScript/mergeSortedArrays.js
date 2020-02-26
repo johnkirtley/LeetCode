@@ -1,5 +1,4 @@
 const mergeArrays = (arr1, arr2) => {
-
     // Concatenate arrays
     const merged = arr1.concat(arr2)
 

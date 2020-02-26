@@ -15,16 +15,15 @@
 
 // O(a + b)
 const findSum = (a, b, target) => {
-    let complements = {};
+    const complements = {};
 
     for (let i = 0; i < a.length; i++) {
-        let item = target - a[i];
-        complements[item] = true;
+        complements[a[i]] = target - a[i];
     }
 
     for (let j = 0; j < b.length; j++) {
         if (complements[b[j]]) {
-            return true;
+            return true && b[j]
         }
     }
     return false;
