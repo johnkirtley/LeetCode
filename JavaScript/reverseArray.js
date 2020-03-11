@@ -1,24 +1,21 @@
 // Reverse Array of Characters In-Place
 
+const reverse = arr => {
+	let left = 0;
+	let right = arr.length - 1;
 
-const reverse = (arr) => {
+	while (left < right) {
+		let temp = arr[left];
 
-    let left = 0;
-    let right = arr.length - 1;
+		arr[left] = arr[right];
+		arr[right] = temp;
 
-    while (left < right) {
-        let temp = arr[left]
-
-        arr[left] = arr[right];
-        arr[right] = temp;
-
-        left++;
-        right--;
-    }
-    return arr;
-}
-
+		left++;
+		right--;
+	}
+	return arr;
+};
 
 // Test
-const array = ['a', 'b', 'c']
+const array = ['a', 'b', 'c'];
 console.log(reverse(array));
