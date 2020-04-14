@@ -1,0 +1,22 @@
+{
+	"name": "leetcode",
+	"version": "1.0.0",
+	"description": "LeetCode practice questions",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/johnkirtley/LeetCode.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/johnkirtley/LeetCode/issues"
+	},
+	"homepage": "https://github.com/johnkirtley/LeetCode#readme",
+	"devDependencies": {
+		"jest": "^25.3.0"
+	}
+}
