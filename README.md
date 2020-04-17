@@ -16,25 +16,14 @@
 
 ### 🏠 [Homepage](https://github.com/johnkirtley/LeetCode#readme)
 
-## Install
-
-```sh
-npm install
-```
-
-## Run tests
-
-```sh
-npm run test
-```
-
 ## Author
 
 👤 **John Kirtley**
 
-* Website: https://johnkirtley.codes
-* Github: [@johnkirtley](https://github.com/johnkirtley)
-* LinkedIn: [@johnkirtley16](https://linkedin.com/in/johnkirtley16)
+- Website: https://johnkirtley.codes
+- Twitter: [@johnkirtley\_](https://twitter.com/johnkirtley_)
+- Github: [@johnkirtley](https://github.com/johnkirtley)
+- LinkedIn: [@johnkirtley16](https://linkedin.com/in/johnkirtley16)
 
 ## 🤝 Contributing
 
@@ -49,5 +38,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2020 [John Kirtley](https://github.com/johnkirtley).<br />
 This project is [ISC](https://github.com/johnkirtley/LeetCode/blob/master/LICENSE) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
