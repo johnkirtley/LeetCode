@@ -1,12 +1,11 @@
 const reverseInteger = (arr) => {
-	if (arr.length === 0) {
-		return null;
-	} else {
-		return (
-			Math.sign(arr) *
-			Number(Math.abs(arr).toString().split('').reverse().join(''))
-		);
+	let value = Number(Math.abs(arr).toString().split('').reverse().join(''));
+
+	if (value > Math.pow(2, 31) - 1) {
+		return 0;
 	}
+
+	return arr < 0 ? -value : value;
 };
 
 // test
