@@ -1,8 +1,8 @@
-var groupAnagrams = function(strs) {
+var groupAnagrams = function (strs) {
 	let hash = {};
 
 	for (let i = 0; i < strs.length; i++) {
-		let sort = strs[i].split('').sort();
+		let sort = strs[i].split('').sort().join('');
 
 		if (!hash[sort]) {
 			hash[sort] = [strs[i]];
@@ -11,7 +11,8 @@ var groupAnagrams = function(strs) {
 		}
 	}
 
-	console.log(Array.from(Object.values(hash)));
+	let keys = Object.values(hash);
+	console.log(keys);
 };
 
 // test

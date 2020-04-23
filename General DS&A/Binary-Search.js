@@ -1,44 +1,38 @@
 const binarySearch = (arr, target) => {
+	// Setting minimum and maximum indexes.
+	let floor = -1;
+	let ceiling = arr.length;
 
-    // Setting Min and Max points
-    let floor = -1;
-    let ceiling = arr.length;
+	while (floor + 1 < ceiling) {
+		// Getting array length.
+		const distance = ceiling - floor;
 
-    // Search while floor is greater than ceiling
-    while (floor + 1 < ceiling) {
+		// Calculating middle of array.
+		const halfDistance = Math.floor(distance / 2);
 
-        // Getting entire array distance
-        const distance = ceiling - floor;
+		// Setting initial search position to the middle index.
+		const guessIndex = floor + halfDistance;
+		const guessValue = arr[guessIndex];
 
-        // Calculating mid-point of array
-        const halfDistance = Math.floor(distance / 2);
+		if (guessValue === target) {
+			return true;
+		}
 
-        // Setting initial guess to middle minus 1
-        const guessIndex = floor + halfDistance;
-        const guessValue = arr[guessIndex];
+		// Target less than middle. Eliminate right side of array.
+		if (guessValue > target) {
+			// Set new max index to middle
+			ceiling = guessIndex;
+		} else {
+			// Target must be greater than middle. Eliminate left side of array.
+			floor = guessIndex;
+		}
+	}
 
-        if (guessValue === target) {
-            return true;
-        }
-
-        // If target to the left of guessValue, eliminate right side of array
-        if (guessValue > target) {
-
-            // Set new max search length
-            ceiling = guessIndex;
-        } else {
-
-            // If target to the right of guessValue, eliminate left side of array
-            floor = guessIndex;
-        }
-    }
-
-    // Return false if target not found in array
-    return false;
-}
-
+	// Return false if target not found in array
+	return false;
+};
 
 // Test
 
-const nums = Array.from(Array(25).keys())
-console.log(binarySearch(nums, 24));
+const nums = Array.from(Array(25).keys());
+console.log(binarySearch(nums, 100));
