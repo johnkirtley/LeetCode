@@ -39,6 +39,8 @@ const threeSum = (arr) => {
 	return result;
 };
 
+module.exports = threeSum;
+
 // test
 let arr = [-1, 0, 1, 2, -1, -4];
 console.log(threeSum(arr));
