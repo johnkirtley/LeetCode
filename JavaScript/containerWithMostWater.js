@@ -10,11 +10,7 @@ const maxWater = (nums) => {
 
 		maxArea = Math.max(maxArea, maxCapacity);
 
-		if (nums[i] <= nums[j]) {
-			i++;
-		} else {
-			j--;
-		}
+		nums[i] <= nums[j] ? i++ : j--;
 	}
 
 	return maxArea;
