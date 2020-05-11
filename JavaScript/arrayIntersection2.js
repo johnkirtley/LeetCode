@@ -1,7 +1,7 @@
 const intersection = (arr1, arr2) => {
-	const hash = {};
+	let hash = {};
 
-	arr1.forEach(function (num) {
+	arr1.forEach((num) => {
 		if (!hash[num]) {
 			hash[num] = 1;
 		} else {
@@ -9,8 +9,9 @@ const intersection = (arr1, arr2) => {
 		}
 	});
 
-	const result = [];
-	arr2.forEach(function (num) {
+	let result = [];
+
+	arr2.forEach((num) => {
 		if (hash[num] && hash[num] > 0) {
 			result.push(num);
 			hash[num]--;
