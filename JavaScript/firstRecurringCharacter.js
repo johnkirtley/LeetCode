@@ -1,13 +1,13 @@
-const firstRecurringCharacter = arr => {
-	const hashTable = {};
+const firstRecurringCharacter = (arr) => {
+	let hash = {};
 
 	for (let i = 0; i < arr.length; i++) {
-		if (!hashTable[arr[i]]) {
-			hashTable[arr[i]] = true;
-		} else if (hashTable[arr[i]]) {
-			return arr[i];
+		let current = arr[i];
+
+		if (!hash[current]) {
+			hash[current] = 1;
 		} else {
-			return undefined;
+			return current;
 		}
 	}
 };

@@ -1,8 +1,7 @@
 const flatten = (arr) => {
-	return arr.reduce(
-		(acc, item) => acc.concat(Array.isArray(item) ? flatten(item) : item),
-		[]
-	);
+	return arr.reduce((accum, item) => {
+		return accum.concat(Array.isArray(item) ? flatten(item) : item);
+	}, []);
 };
 
 // test
