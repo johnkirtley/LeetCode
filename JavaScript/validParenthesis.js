@@ -1,6 +1,6 @@
 const isValid = (s) => {
 	let stack = [];
-	let hash = { '(': ')', '{': '}', '[': ']' };
+	let hash = { '[': ']', '{': '}', '(': ')' };
 
 	for (let i = 0; i < s.length; i++) {
 		let current = s[i];
