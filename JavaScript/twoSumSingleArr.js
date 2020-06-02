@@ -1,16 +1,19 @@
 const twoSum = (arr, target) => {
-	let numObject = {};
+	let nums = {};
 
 	for (let i = 0; i < arr.length; i++) {
-		let num = arr[i];
-		numObject[num] = i;
+		let current = arr[i];
+
+		if (!nums[current]) {
+			nums[current] = i;
+		}
 	}
 
 	for (let i = 0; i < arr.length; i++) {
 		let difference = target - arr[i];
 
-		if (numObject.hasOwnProperty(difference) && numObject[difference] !== i) {
-			return [i, numObject[difference]];
+		if (nums.hasOwnProperty(difference) && nums[difference] !== i) {
+			return [i, nums[difference]];
 		}
 	}
 };
