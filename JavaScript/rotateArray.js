@@ -1,10 +1,10 @@
 const rotateArray = (arr, k) => {
-	let shiftCount = 0;
+	let count = 0;
 
-	while (shiftCount !== k) {
-		let last = arr.pop();
-		arr.unshift(last);
-		shiftCount++;
+	while (count !== k) {
+		let num = arr.pop();
+		arr.unshift(num);
+		count++;
 	}
 	return arr;
 };
