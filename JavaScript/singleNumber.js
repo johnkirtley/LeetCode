@@ -1,21 +1,23 @@
 const singleNum = (arr) => {
-	let hash = {};
+	let nums = {};
 
 	for (let i = 0; i < arr.length; i++) {
 		let current = arr[i];
 
-		if (!hash[current]) {
-			hash[current] = 1;
+		if (!nums[current]) {
+			nums[current] = 1;
 		} else {
-			hash[current] = hash[current] += 1;
+			nums[current] = nums[current] + 1;
 		}
 	}
 
-	for (let num in hash) {
-		if (hash[num] === 1) {
-			return hash[num];
+	for (let num in nums) {
+		if (nums[num] === 1) {
+			return nums[num];
 		}
 	}
+
+	return false;
 };
 
 // test
