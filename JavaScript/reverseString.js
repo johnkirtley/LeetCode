@@ -1,22 +1,21 @@
 const reverseStr = (str) => {
-    const array = str.split('');
+	let arr = str.split('');
 
-    let left = 0;
-    let right = array.length - 1;
+	let left = 0;
+	let right = arr.length - 1;
 
-    while (left < right) {
-        let temp = array[left];
+	while (left < right) {
+		let temp = arr[left];
 
-        array[left] = array[right];
-        array[right] = temp;
+		arr[left] = arr[right];
+		arr[right] = temp;
 
-        left++;
-        right--;
-    }
+		left++;
+		right--;
+	}
 
-    return array.toString().replace(/,/g, '');
-}
-
+	return arr.toString().replace(/,/g, '');
+};
 
 // Test
 let string = 'hello';
